@@ -46,40 +46,14 @@ def runGame():
            
         elif playerChoice == cpuChoice:
             print(f"Player Choice: {playerChoice}, CPU choice: {cpuChoice}, There is a tie!")
-            if playerChoice == "rock":
-                rockImg()
-            elif playerChoice == "paper":
-                paperImg()
-            elif playerChoice == "scissors":
-                scissorsImg()
-
-            if cpuChoice == "rock":
-                rockImg()
-            elif cpuChoice == "paper":
-                paperImg()
-            elif cpuChoice == "scissors":
-                scissorsImg()
+            displayImg(playerChoice, cpuChoice)
 
         else:
             print(f"Player Choice: {playerChoice} , CPU choice: {cpuChoice}, Sorry, try again!")    #loser handling
             playerScore -= 1
             if playerScore < 0:
                 playerScore=0
-                
-            if playerChoice == "rock":
-                rockImg()
-            elif playerChoice == "paper":
-                paperImg()
-            elif playerChoice == "scissors":
-                scissorsImg()
-
-            if cpuChoice == "rock":
-                rockImg()
-            elif cpuChoice == "paper":
-                paperImg()
-            elif cpuChoice == "scissors":
-                scissorsImg()
-
+            displayImg(playerChoice, cpuChoice)
         # any input error handling
     else:
         print("Please pick a valid choice: Rock, Paper, or scissors")
@@ -144,6 +118,21 @@ def main():
                     score += gameScore
     elif run == "no":
         print("Restart game to continue")
+
+def displayImg(playerChoice, cpuChoice):
+    if playerChoice == "rock":
+        rockImg()
+    elif playerChoice == "paper":
+        paperImg()
+    elif playerChoice == "scissors":
+        scissorsImg()
+
+    if cpuChoice == "rock":
+        rockImg()
+    elif cpuChoice == "paper":
+        paperImg()
+    elif cpuChoice == "scissors":
+        scissorsImg()   
 
 main()
       
