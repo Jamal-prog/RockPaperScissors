@@ -94,27 +94,30 @@ def scissorsImg():
     ---.__(___)
     """)   
 
-# intro to game 
-rockImg()
-paperImg()
-scissorsImg()
-run = input("Welcome to Rock, Paper, Scissors, Do you wish to begin yes/no? ").lower()
-score = 0
-if run == "yes":
-   while True:
-        gameScore = runGame()
-        print("---------------------------------------")
-        # end game prompt
-        endGame = input("Type 'end' to end game or press anything else to keep playing: ").lower()
-        # end game condition
-        if endGame == "end":
-            score += gameScore
-            print(f"Player Score: {score}")
-            break
-        else:
-            score += gameScore
-elif run == "no":
-    print("Restart game to continue")
+def main():
+    # intro to game 
+    rockImg()
+    paperImg()
+    scissorsImg()
+    run = input("Welcome to Rock, Paper, Scissors, Do you wish to begin yes/no? ").lower()
+    score = 0
+    if run == "yes":
+        while True:
+                gameScore = runGame()
+                print("---------------------------------------")
+                # end game prompt
+                endGame = input("Type 'end' to end game or press anything else to keep playing: ").lower()
+                # end game condition
+                if endGame == "end":
+                    score += gameScore
+                    print(f"Player Score: {score}")
+                    break
+                else:
+                    score += gameScore
+    elif run == "no":
+        print("Restart game to continue")
+
+main()
       
      
 
