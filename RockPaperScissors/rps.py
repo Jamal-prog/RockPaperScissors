@@ -24,10 +24,7 @@ def runGame():
 
     
     if playerChoice in choices:
-        print("ROCK")
-        print("PAPER")
-        print("SCISSORS")
-        print("")
+      
         # Conditions
         if playerChoice == "rock" and cpuChoice == "scissors":
             print(f"Player Choice: {playerChoice} , CPU choice {cpuChoice}, You won!!")
