@@ -46,11 +46,39 @@ def runGame():
            
         elif playerChoice == cpuChoice:
             print(f"Player Choice: {playerChoice}, CPU choice: {cpuChoice}, There is a tie!")
+            if playerChoice == "rock":
+                rockImg()
+            elif playerChoice == "paper":
+                paperImg()
+            elif playerChoice == "scissors":
+                scissorsImg()
+
+            if cpuChoice == "rock":
+                rockImg()
+            elif cpuChoice == "paper":
+                paperImg()
+            elif cpuChoice == "scissors":
+                scissorsImg()
+
         else:
             print(f"Player Choice: {playerChoice} , CPU choice: {cpuChoice}, Sorry, try again!")    #loser handling
             playerScore -= 1
             if playerScore < 0:
                 playerScore=0
+                
+            if playerChoice == "rock":
+                rockImg()
+            elif playerChoice == "paper":
+                paperImg()
+            elif playerChoice == "scissors":
+                scissorsImg()
+
+            if cpuChoice == "rock":
+                rockImg()
+            elif cpuChoice == "paper":
+                paperImg()
+            elif cpuChoice == "scissors":
+                scissorsImg()
 
         # any input error handling
     else:
